@@ -21,7 +21,7 @@ class App extends Component {
     // check cache first
     if (localStorage.hasOwnProperty(term)) {
       let value = JSON.parse(localStorage.getItem(term));
-      if (value && value != undefined && value.length > 0) {
+      if (value && value !== undefined && value.length > 0) {
         this.setState({ images: value, size: size });
       }
     } else {
